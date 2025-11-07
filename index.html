@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prompt Calculator</title>
+    </head>
+    <body>
+        <div style="width: 100%">
+            <h1
+                style="
+                    width: 75%;
+                    margin: 60px auto;
+                    text-align: center;
+                    background-color: teal;
+                    padding: 20px;
+                "
+            >
+                JS Prompt Calculator
+            </h1>
+        </div>
+        <script>
+            function calculation() {
+                switch (operator) {
+                    case "+":
+                        alert(`The sum is: ${num1 + num2}`);
+                        break;
+                    case "-":
+                        alert(`The substitution is: ${num1 - num2}`);
+                        break;
+                    case "*":
+                        alert(`The multiplication is: ${num1 * num2}`);
+                        break;
+                    case "/":
+                        num2 == 0
+                            ? ((num2 = Number(
+                                  prompt("Enter 2nd number again: ")
+                              )),
+                              alert(`The division is: ${num1 / num2}`))
+                            : alert(`The division is: ${num1 / num2}`);
+                        break;
+                    default:
+                        operator = prompt(
+                            "You Entered an incorrect operator. Enter a right operator again: '+' '-' '*' '/': "
+                        );
+                        calculation();
+                        break;
+                }
+            }
+            let num1 = Number(prompt("Enter 1st number: "));
+            let operator = prompt("Enter an operator: '+' '-' '*' '/': ");
+            let num2 = Number(prompt("Enter 2nd number: "));
+            calculation();
+        </script>
+    </body>
+</html>
