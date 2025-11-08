@@ -34,9 +34,9 @@
                     case "/":
                         num2 == 0
                             ? ((num2 = Number(
-                                  prompt("Enter 2nd number again: ")
+                                  prompt("2nd number Should not be 0! Enter 2nd number again: ")
                               )),
-                              alert(`The division is: ${num1 / num2}`))
+                              calculation())
                             : alert(`The division is: ${num1 / num2}`);
                         break;
                     default:
